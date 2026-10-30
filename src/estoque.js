@@ -108,7 +108,7 @@ export function normalizar(raw) {
     description: String(pick(raw, "descricao", "descrição", "observacoes", "description") ?? "").trim(),
     equipment: lista(pick(raw, "opcionais", "acessorios", "itens", "equipamentos")),
     photos: fotos(pick(raw, "fotos", "imagens", "photos", "images"), BASE),
-    createdAt: Date.parse(pick(raw, "criado_em", "criadoEm", "created_at", "data_cadastro") ?? "") || 0,
+    createdAt: Date.parse(pick(raw, "criado_em", "criadoEm", "entrada", "created_at", "data_cadastro") ?? "") || 0,
   };
 }
 
