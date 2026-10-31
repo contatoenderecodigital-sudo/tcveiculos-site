@@ -186,18 +186,21 @@ export function Segments({ items, value, onChange, name }) {
   );
 }
 
+// Chave em minusculas: a marca vem digitada no painel ("TOYOTA", "vw ", "Volks").
 const MARCAS = {
-  Jeep: "jeep-alt-svgrepo-com.svg",
-  Toyota: "cdnlogo.com_toyota-logo.svg",
-  BMW: "bmw-svgrepo-com.svg",
-  Volkswagen: "volkswagen.svg",
-  VW: "volkswagen.svg",
-  Ford: "ford.svg",
-  Fiat: "fiat-3-logo-svgrepo-com.svg",
+  jeep: "jeep-alt-svgrepo-com.svg",
+  toyota: "cdnlogo.com_toyota-logo.svg",
+  bmw: "bmw-svgrepo-com.svg",
+  volkswagen: "volkswagen.svg",
+  volks: "volkswagen.svg",
+  vw: "volkswagen.svg",
+  ford: "ford.svg",
+  fiat: "fiat-3-logo-svgrepo-com.svg",
 };
 export function BrandLogo({ brand }) {
-  return MARCAS[brand] ? (
-    <img className="tc-brand-logo" src={"/assets/brands/" + MARCAS[brand]} alt={brand} />
+  const arquivo = MARCAS[String(brand ?? "").trim().toLowerCase()];
+  return arquivo ? (
+    <img className="tc-brand-logo" src={"/assets/brands/" + arquivo} alt={brand} />
   ) : (
     <span>{brand}</span>
   );
