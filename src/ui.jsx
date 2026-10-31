@@ -1,7 +1,7 @@
 import { useEffect, useId, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import * as Select from "@radix-ui/react-select";
-import { ArrowRight, CalendarDays, Check, ChevronDown, Heart, Menu, Settings2, CarFront, X } from "lucide-react";
+import { ArrowUpRight, CalendarDays, Check, ChevronDown, Heart, Menu, Settings2, CarFront, X } from "lucide-react";
 import { BASE, listar } from "./estoque.js";
 
 export const WHATSAPP = "5549999868242";
@@ -89,7 +89,7 @@ export function WhatsIcon() {
 
 export const Logo = () => <img src="/assets/tc-logo.svg" alt="TC Veículos" className="tc-mark" />;
 
-export function Action({ children, href, onClick, className = "", icon: Icon = ArrowRight, ...p }) {
+export function Action({ children, href, onClick, className = "", icon: Icon = ArrowUpRight, ...p }) {
   const inner = (
     <>
       <span>{children}</span>
@@ -230,6 +230,9 @@ export function CarCard({ car: n, saved, onSave }) {
         ) : (
           <span className="tc-no-photo">Fotos em breve</span>
         )}
+        <span className="tc-image-open">
+          <ArrowUpRight size={23} />
+        </span>
         {n.status === "reservado" && <b className="tc-reserved">Reservado</b>}
       </Link>
       <div className="tc-car-info">
