@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { LayoutGroup, motion, useReducedMotion } from "framer-motion";
 import * as Dialog from "@radix-ui/react-dialog";
-import { ArrowRight, ArrowUpRight, MapPin, Phone, X } from "lucide-react";
+import { ArrowRight, MapPin, Phone, X } from "lucide-react";
 import Inventory, { FILTRO_INICIAL } from "./Inventory.jsx";
 import {
   Action,
@@ -108,9 +108,6 @@ export default function Home({ estoque, saved, toggleSave }) {
                     </div>
                     <div className="tc-category-bottom">
                       <span>Explorar {q.name.toLowerCase()}</span>
-                      <i>
-                        <ArrowUpRight size={23} />
-                      </i>
                     </div>
                   </motion.button>
                 );
@@ -148,7 +145,6 @@ export default function Home({ estoque, saved, toggleSave }) {
                   <small>Instagram</small>
                   <strong>@tcveiculosxxe</strong>
                 </span>
-                <ArrowUpRight size={19} />
               </a>
               <div className="tc-contact-links">
                 <a href={wa(MSG_GERAL)} target="_blank" rel="noreferrer">
@@ -159,7 +155,6 @@ export default function Home({ estoque, saved, toggleSave }) {
                     <small>WhatsApp</small>
                     <strong>(49) 99986 8242</strong>
                   </span>
-                  <ArrowUpRight size={19} />
                 </a>
                 <a href="tel:+554934300680">
                   <i className="tc-contact-icon">
@@ -169,7 +164,6 @@ export default function Home({ estoque, saved, toggleSave }) {
                     <small>Telefone da loja</small>
                     <strong>(49) 3430 0680</strong>
                   </span>
-                  <ArrowUpRight size={19} />
                 </a>
               </div>
             </Reveal>
@@ -189,9 +183,6 @@ export default function Home({ estoque, saved, toggleSave }) {
                   <strong>Av. Brasil, 1313</strong>
                   <small>Colatto · Xanxerê, SC</small>
                 </span>
-                <i className="tc-contact-icon tc-route-arrow">
-                  <ArrowUpRight size={21} />
-                </i>
               </a>
             </div>
           </section>

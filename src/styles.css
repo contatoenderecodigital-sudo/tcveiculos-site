@@ -3047,13 +3047,13 @@ footer.tc-site-footer {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: var(--tc-black);
+  background: var(--tc-orange);
   color: var(--tc-white) !important;
-  border: 2px solid var(--tc-orange);
-  transition: transform 0.25s;
+  transition: transform 0.25s, background 0.25s;
 }
 .tc-whatsapp-float:is(:hover, :focus-visible) {
   transform: translateY(-3px);
+  background: var(--tc-orange-dark, var(--tc-orange));
 }
 .tc-whatsapp-float svg {
   width: 26px;
