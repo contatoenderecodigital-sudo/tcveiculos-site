@@ -2793,8 +2793,10 @@ footer.tc-site-footer {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding: 8px 0 16px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--tc-orange) transparent;
+  scrollbar-width: none;
+}
+.tc-category-gallery::-webkit-scrollbar {
+  display: none;
 }
 .tc-category-gallery .tc-category {
   flex: 1 0 calc((100% - 60px) / 4);
