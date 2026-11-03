@@ -7,6 +7,7 @@ import Carro from "./Carro.jsx";
 import Legal, { PAGINAS_LEGAIS, tituloLegal } from "./Legal.jsx";
 import { META_PADRAO, setMeta, useEstoque, useRoute, useSaved } from "./ui.jsx";
 import "./styles.css";
+import "./apple.css";
 
 // Links antigos do site eram por hash (#/privacidade); viram caminhos normais.
 if (location.hash.startsWith("#/") && location.hash.length > 2) history.replaceState(null, "", location.hash.slice(1));

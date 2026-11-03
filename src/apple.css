@@ -1,0 +1,118 @@
+/* Acabamento no estilo Apple (Liquid Glass) e ajustes de celular.
+   Carrega depois do styles.css e só troca pele e alinhamento. */
+:root {
+  --tc-vidro-brilho: inset 0 1px 0 #ffffffb3, inset 0 -1px 0 #ffffff26, inset 0 0 0 1px #ffffff33;
+  --tc-vidro-sombra: 0 10px 30px #1112131f, 0 1px 3px #11121314;
+}
+
+/* navegação flutuante em vidro claro */
+.tc-nav {
+  background: linear-gradient(180deg, #ffffffb8, #ffffff85) !important;
+  border: 1px solid #ffffffcc;
+  box-shadow: var(--tc-vidro-brilho), var(--tc-vidro-sombra) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+}
+
+/* círculo da seta: branco no "Fale com a TC", preto no "Conhecer os veículos" */
+.tc-nav .tc-action i {
+  background: #fff;
+  color: var(--tc-orange, #f26a1b);
+}
+.tc-hero-aside .tc-action i {
+  background: var(--tc-black);
+  color: #fff;
+}
+
+/* seta dos cards de categoria em branco */
+.tc-category-bottom i {
+  color: #fff;
+}
+
+/* "Explorar suvs" e afins: cápsula de vidro sobre a foto */
+.tc-category-bottom > span {
+  background: linear-gradient(180deg, #ffffffd9, #ffffff99) !important;
+  border: 1px solid #ffffffe6;
+  box-shadow: var(--tc-vidro-brilho), 0 4px 14px #11121326;
+  -webkit-backdrop-filter: blur(14px) saturate(170%);
+  backdrop-filter: blur(14px) saturate(170%);
+}
+
+/* coração do card: círculo de vidro */
+.tc-save {
+  background: linear-gradient(180deg, #ffffffe6, #ffffffb3) !important;
+  border: 1px solid #ffffffe6 !important;
+  box-shadow: var(--tc-vidro-brilho), 0 3px 10px #1112131f;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* WhatsApp flutuante com o degradê da marca */
+.tc-whatsapp-float {
+  background: var(--tc-gradient) !important;
+  color: #fff;
+  border: 1px solid #ffffff59;
+  box-shadow: var(--tc-vidro-brilho), 0 10px 26px #f26a1b59 !important;
+}
+.tc-whatsapp-float svg {
+  filter: drop-shadow(0 1px 1px #11121340);
+}
+
+/* troca: texto sem palavra solta e foto do carro centralizada, fundindo no preto */
+.tc-trade-copy > p {
+  text-wrap: balance;
+}
+@media (max-width: 700px) {
+  .tc-trade-copy {
+    max-width: 380px;
+  }
+  .tc-trade > img {
+    width: calc(100% + 12%);
+    max-width: none;
+    margin-inline: -6%;
+    aspect-ratio: 1.45;
+    object-position: 92% 60%;
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 22%, #000 100%);
+    mask-image: linear-gradient(180deg, transparent, #000 22%, #000 100%);
+  }
+}
+
+/* celular: títulos e rodapé centralizados */
+@media (max-width: 700px) {
+  .tc-visit h2 {
+    text-align: center;
+  }
+  .tc-site-footer .tc-footer-columns,
+  .tc-site-footer .tc-footer-columns > nav,
+  .tc-site-footer .tc-footer-columns > div {
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+  .tc-site-footer .tc-footer-columns > nav,
+  .tc-site-footer .tc-footer-columns > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .tc-site-footer .tc-footer-base {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* títulos das colunas do rodapé em maiúsculas, como sobretítulo */
+.tc-site-footer .tc-footer-columns h3 {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .tc-nav,
+  .tc-category-bottom > span,
+  .tc-save {
+    background: #fff !important;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
