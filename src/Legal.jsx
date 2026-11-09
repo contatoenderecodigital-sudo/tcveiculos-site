@@ -7,7 +7,7 @@ const Privacidade = () => (
     <section>
       <h2>Quem é a loja</h2>
       <p>
-        TC Comércio de Veículos Ltda., nome fantasia TC Veículos, CNPJ 24.168.436/0001-52, localizada na Av. Brasil, 1313, Colatto, Xanxerê, SC, CEP 89820-000. Para assuntos sobre seus dados, utilize o WhatsApp (49) 99986 8242 ou o telefone (49) 3430 0680.
+        TC Comércio de Veículos Ltda., nome fantasia TC Veículos, CNPJ 24.168.436/0001-52, localizada na Av. Brasil, 1313, Colatto, Xanxerê, SC, CEP 89820-000. Para assuntos sobre seus dados, utilize o WhatsApp ou o telefone (49) 3430 0680.
       </p>
     </section>
     <section>
