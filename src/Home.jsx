@@ -163,17 +163,17 @@ export default function Home({ estoque, saved, toggleSave }) {
                   </i>
                   <span>
                     <small>WhatsApp</small>
-                    <strong>(49) 99986 8242</strong>
+                    <strong>(49) 3430 0680</strong>
                   </span>
                   <ArrowUpRight size={19} />
                 </a>
-                <a href="tel:+554934300680">
+                <a href="tel:+5549999868242">
                   <i className="tc-contact-icon">
                     <Phone size={22} />
                   </i>
                   <span>
-                    <small>Telefone da loja</small>
-                    <strong>(49) 3430 0680</strong>
+                    <small>Celular</small>
+                    <strong>(49) 99986 8242</strong>
                   </span>
                   <ArrowUpRight size={19} />
                 </a>

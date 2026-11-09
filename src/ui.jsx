@@ -4,7 +4,7 @@ import * as Select from "@radix-ui/react-select";
 import { ArrowUpRight, CalendarDays, Check, ChevronDown, Heart, Menu, Settings2, CarFront, X } from "lucide-react";
 import { BASE, listar } from "./estoque.js";
 
-export const WHATSAPP = "5549999868242";
+export const WHATSAPP = "554934300680";
 export const wa = (msg) => `https://wa.me/${WHATSAPP}?text=` + encodeURIComponent(msg);
 export const MSG_GERAL = "Olá! Gostaria de conversar com a TC Veículos.";
 export const MAPS = "https://www.google.com/maps/place/TC+Ve%C3%ADculos/data=!4m2!3m1!1s0x0:0xe0079f358751991c";
@@ -313,7 +313,7 @@ export function Header({ count, go }) {
 }
 
 export const DADOS =
-  "https://wa.me/5549999868242?text=" +
+  `https://wa.me/${WHATSAPP}?text=` +
   encodeURIComponent("Olá! Gostaria de tratar de uma solicitação sobre meus dados pessoais.");
 
 export function Footer({ go }) {
@@ -338,9 +338,9 @@ export function Footer({ go }) {
         <div>
           <h3>Fale com a TC</h3>
           <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer">
-            WhatsApp · (49) 99986 8242
+            WhatsApp · (49) 3430 0680
           </a>
-          <a href="tel:+554934300680">Telefone · (49) 3430 0680</a>
+          <a href="tel:+5549999868242">Celular · (49) 99986 8242</a>
           <a href="tel:+5549998354200">Celular · (49) 99835 4200</a>
           <a href="https://www.instagram.com/tcveiculosxxe/" target="_blank" rel="noreferrer">
             Instagram · @tcveiculosxxe

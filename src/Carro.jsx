@@ -437,7 +437,7 @@ export default function Carro({ id, estoque, saved, toggleSave }) {
                   Xanxerê, Santa Catarina
                 </p>
                 <a href={falar("Gostaria de tirar uma dúvida.")} target="_blank" rel="noreferrer">
-                  WhatsApp · (49) 99986 8242
+                  WhatsApp · (49) 3430 0680
                 </a>
               </div>
               <Compartilhar car={n} />
