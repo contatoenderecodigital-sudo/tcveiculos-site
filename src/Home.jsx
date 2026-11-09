@@ -177,6 +177,16 @@ export default function Home({ estoque, saved, toggleSave }) {
                   </span>
                   <ArrowUpRight size={19} />
                 </a>
+                <a href="tel:+5549998354200">
+                  <i className="tc-contact-icon">
+                    <Phone size={22} />
+                  </i>
+                  <span>
+                    <small>Celular</small>
+                    <strong>(49) 99835 4200</strong>
+                  </span>
+                  <ArrowUpRight size={19} />
+                </a>
                 <a href="https://www.facebook.com/tcveiculosxxe" target="_blank" rel="noreferrer">
                   <i className="tc-contact-icon">
                     <FacebookIcon size={22} />
