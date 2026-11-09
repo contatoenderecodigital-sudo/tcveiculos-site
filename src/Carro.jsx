@@ -228,6 +228,8 @@ function schema(n) {
         name: "TC Veículos",
         telephone: "+55 49 3430-0680",
         address: { "@type": "PostalAddress", streetAddress: "Av. Brasil, 1313, Colatto", addressLocality: "Xanxerê", addressRegion: "SC", postalCode: "89820-000", addressCountry: "BR" },
+        openingHours: ["Mo-Fr 07:30-12:00", "Mo-Fr 13:30-18:30", "Sa 07:30-16:00"],
+        sameAs: ["https://www.instagram.com/tcveiculosxxe/", "https://www.facebook.com/tcveiculosxxe"],
       },
     },
   });

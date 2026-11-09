@@ -25,6 +25,12 @@ const InstagramIcon = ({ size = 24 }) => (
   </svg>
 );
 
+const FacebookIcon = ({ size = 24 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
 const CATEGORIAS = [
   { name: "SUVs", value: "SUV", art: "/assets/tc-compass-plate-corrected.svg", copy: "Espaço para novos caminhos." },
   { name: "Sedãs", value: "Sedã", art: "/assets/tc-corolla-plate-corrected.svg", copy: "Conforto em cada quilômetro." },
@@ -171,6 +177,21 @@ export default function Home({ estoque, saved, toggleSave }) {
                   </span>
                   <ArrowUpRight size={19} />
                 </a>
+                <a href="https://www.facebook.com/tcveiculosxxe" target="_blank" rel="noreferrer">
+                  <i className="tc-contact-icon">
+                    <FacebookIcon size={22} />
+                  </i>
+                  <span>
+                    <small>Facebook</small>
+                    <strong>TC Veículos</strong>
+                  </span>
+                  <ArrowUpRight size={19} />
+                </a>
+              </div>
+              <div className="tc-hours">
+                <small>Horário de atendimento</small>
+                <p><strong>Segunda a sexta</strong> 7h30 às 12h e 13h30 às 18h30</p>
+                <p><strong>Sábado</strong> 7h30 às 16h, sem fechar ao meio-dia</p>
               </div>
             </Reveal>
             <div className="tc-location">

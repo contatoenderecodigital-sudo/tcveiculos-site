@@ -3283,3 +3283,22 @@ button.tc-source-link {
     padding-bottom: 110px;
   }
 }
+
+/* Horário de atendimento, abaixo dos contatos da seção "A gente se encontra aqui". */
+.tc-hours {
+  margin-top: 30px;
+  display: grid;
+  gap: 6px;
+}
+.tc-hours small {
+  font-size: 12px;
+  color: var(--tc-muted);
+}
+.tc-hours p {
+  font-size: 15px;
+  line-height: 1.45;
+}
+.tc-hours strong {
+  font-weight: 650;
+  margin-right: 6px;
+}
