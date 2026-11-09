@@ -2283,30 +2283,12 @@ td {
 .tc-purchase-questions a:is(:hover, :focus-visible, :active) {
   color: var(--tc-black) !important;
 }
-.tc-nav > .tc-action,
-.tc-trade-copy > .tc-action {
-  color: var(--tc-black) !important;
-}
-.tc-nav > .tc-action:is(:hover, :focus-visible, :active),
-.tc-trade-copy > .tc-action:is(:hover, :focus-visible, :active) {
-  color: var(--tc-white) !important;
-}
 .tc-purchase-primary > svg,
 .tc-product-mobile-contact > a > svg {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
   color: inherit;
-}
-.tc-nav > .tc-action i,
-.tc-trade-copy > .tc-action i {
-  background: var(--tc-black);
-  color: var(--tc-yellow);
-}
-.tc-nav > .tc-action:is(:hover, :focus-visible, :active) i,
-.tc-trade-copy > .tc-action:is(:hover, :focus-visible, :active) i {
-  background: var(--tc-white);
-  color: var(--tc-orange);
 }
 .tc-site-footer {
   padding: 65px 6% 24px;

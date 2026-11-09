@@ -116,3 +116,13 @@
     backdrop-filter: none;
   }
 }
+
+/* troca no desktop: a foto cresce com a tela e ancora no carro (rodas e frente inteiras em qualquer largura) */
+@media (min-width: 701px) {
+  .tc-trade {
+    min-height: max(520px, 34vw);
+  }
+  .tc-trade > img {
+    object-position: 100% 72%;
+  }
+}
