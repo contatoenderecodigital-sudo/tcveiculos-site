@@ -69,7 +69,7 @@ const Termos = () => (
     <section>
       <h2>Contato e uso do conteúdo</h2>
       <p>
-        Para esclarecer informações ou comunicar um problema, contate (49) 3430 0680 pelo WhatsApp ou telefone, ou (49) 99986 8242 e (49) 99835 4200 por celular. Marcas de fabricantes pertencem aos seus respectivos titulares. O uso no catálogo identifica os veículos, sem indicar vínculo de concessionária autorizada.
+        Para esclarecer informações ou comunicar um problema, contate (49) 3430 0680 pelo WhatsApp ou telefone. Marcas de fabricantes pertencem aos seus respectivos titulares. O uso no catálogo identifica os veículos, sem indicar vínculo de concessionária autorizada.
       </p>
     </section>
   </>

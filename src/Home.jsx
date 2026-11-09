@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { LayoutGroup, motion, useReducedMotion } from "framer-motion";
 import * as Dialog from "@radix-ui/react-dialog";
-import { ArrowRight, ArrowUpRight, MapPin, Phone, X } from "lucide-react";
+import { ArrowRight, ArrowUpRight, MapPin, X } from "lucide-react";
 import Inventory, { FILTRO_INICIAL } from "./Inventory.jsx";
 import {
   Action,
@@ -164,26 +164,6 @@ export default function Home({ estoque, saved, toggleSave }) {
                   <span>
                     <small>WhatsApp</small>
                     <strong>(49) 3430 0680</strong>
-                  </span>
-                  <ArrowUpRight size={19} />
-                </a>
-                <a href="tel:+5549999868242">
-                  <i className="tc-contact-icon">
-                    <Phone size={22} />
-                  </i>
-                  <span>
-                    <small>Celular</small>
-                    <strong>(49) 99986 8242</strong>
-                  </span>
-                  <ArrowUpRight size={19} />
-                </a>
-                <a href="tel:+5549998354200">
-                  <i className="tc-contact-icon">
-                    <Phone size={22} />
-                  </i>
-                  <span>
-                    <small>Celular</small>
-                    <strong>(49) 99835 4200</strong>
                   </span>
                   <ArrowUpRight size={19} />
                 </a>

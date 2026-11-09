@@ -340,8 +340,6 @@ export function Footer({ go }) {
           <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer">
             WhatsApp · (49) 3430 0680
           </a>
-          <a href="tel:+5549999868242">Celular · (49) 99986 8242</a>
-          <a href="tel:+5549998354200">Celular · (49) 99835 4200</a>
           <a href="https://www.instagram.com/tcveiculosxxe/" target="_blank" rel="noreferrer">
             Instagram · @tcveiculosxxe
           </a>
