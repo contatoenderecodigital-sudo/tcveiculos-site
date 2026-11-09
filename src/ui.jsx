@@ -395,11 +395,14 @@ export function setMeta({ title, description, image }) {
   put("name", "description", description);
   put("property", "og:title", title);
   put("property", "og:description", description);
-  put("property", "og:url", location.href);
-  if (image) put("property", "og:image", new URL(image, location.href).href);
+  // canonical sempre no domínio principal, sem www, filtros nem âncora
+  const url = "https://tcveiculos.com.br" + location.pathname;
+  put("property", "og:url", url);
+  document.head.querySelector('link[rel="canonical"]')?.setAttribute("href", url);
+  if (image) put("property", "og:image", new URL(image, "https://tcveiculos.com.br/").href);
 }
 export const META_PADRAO = {
-  title: "TC Veículos | Seu próximo capítulo",
-  description: "Conheça a TC Veículos, em Xanxerê. Compra, venda, troca e financiamento de veículos.",
-  image: "/assets/tc-campaign-v2.png",
+  title: "TC Veículos | Seminovos em Xanxerê, SC",
+  description: "Seminovos com procedência em Xanxerê, SC. Compra, venda, troca e financiamento de carros na TC Veículos, Av. Brasil, 1313. Veja o estoque atualizado.",
+  image: "/assets/tc-og.jpg",
 };

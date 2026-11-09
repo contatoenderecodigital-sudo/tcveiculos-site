@@ -1,0 +1,17 @@
+# TC Veículos
+
+> Revenda de carros seminovos em Xanxerê, Santa Catarina. Compra, venda, troca e financiamento de veículos.
+
+Razão social: TC Comércio de Veículos Ltda., CNPJ 24.168.436/0001-52.
+Endereço: Av. Brasil, 1313, bairro Colatto, Xanxerê, SC, CEP 89820-000.
+Telefones: (49) 3430-0680, (49) 99986-8242 e (49) 99835-4200.
+E-mail: tcveiculosxxe@gmail.com
+Horário: segunda a sexta das 7h30 às 12h e das 13h30 às 18h30; sábado das 7h30 às 16h, sem fechar ao meio-dia.
+Instagram: https://www.instagram.com/tcveiculosxxe/
+Facebook: https://www.facebook.com/tcveiculosxxe
+
+## Páginas
+
+- [Início](https://tcveiculos.com.br/): apresentação da loja, categorias, destaques do estoque, avaliação de usado e contato.
+- [Estoque](https://tcveiculos.com.br/estoque): todos os carros disponíveis, com filtro por marca, categoria, preço e ano. Cada carro tem página própria com fotos, preço, quilometragem, opcionais e simulação de financiamento.
+- [Privacidade](https://tcveiculos.com.br/privacidade)
