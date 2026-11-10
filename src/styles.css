@@ -3284,3 +3284,18 @@ button.tc-source-link {
   font-weight: 650;
   margin-right: 6px;
 }
+
+/* Tela ultrawide (mais larga que 2:1): a foto do topo nunca corta o carro.
+   Ela aparece inteira, encostada à direita, e a borda esquerda some no preto
+   do fundo, onde fica o título. */
+@media (min-width: 701px) and (min-aspect-ratio: 2/1) {
+  .tc-hero {
+    --tc-hero-h: min(100svh, 960px);
+  }
+  .tc-hero picture > img {
+    object-fit: contain;
+    object-position: right bottom;
+    -webkit-mask-image: linear-gradient(90deg, transparent calc(100% - var(--tc-hero-h) * 1.777), #000 calc(100% - var(--tc-hero-h) * 1.35));
+    mask-image: linear-gradient(90deg, transparent calc(100% - var(--tc-hero-h) * 1.777), #000 calc(100% - var(--tc-hero-h) * 1.35));
+  }
+}
