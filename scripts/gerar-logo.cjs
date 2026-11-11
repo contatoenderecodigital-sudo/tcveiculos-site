@@ -24,8 +24,6 @@ const PECAS = [
   'M318 80 C327 45 352 20 398 20 H587 L541 80 Z',
   // C, corpo (abre por dentro e desce ate a faixa)
   'M300 109 H371 C358 130 365 168 421 183 H528 L474 259 H340 C300 259 279 238 283 198 L289 124 C290 114 294 109 300 109 Z',
-  // faixa do telefone
-  'M558 183 H1062 L1008 259 H504 Z',
 ];
 
 // ---- letras por linha central (altura 60, origem no alto) ----
@@ -86,20 +84,20 @@ function logo(escuro) {
   const contorno = PECAS.map(d => `<path d="${d}" fill="${PRETO}" stroke="${PRETO}" stroke-width="22" stroke-linejoin="round"/>`).join('');
   const preench = PECAS.map(d => `<path d="${d}" fill="url(#tcg)"/>`).join('');
   const v = palavra(VEICULOS, { s: 17, r: 13, gap: 13, x: 425, base: 158, alt: 58, inclina: 17, cor: corPalavra });
-  const f = palavra(FONE, { s: 13, r: 9, gap: 9, x: 622, base: 241, alt: 44, inclina: 14, cor: '#ffffff' });
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="288" viewBox="0 0 1080 288">
+  // const f = palavra(FONE, { s: 13, r: 9, gap: 9, x: 622, base: 241, alt: 44, inclina: 14, cor: '#ffffff' });
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="__W__" height="288" viewBox="0 0 __W__ 288">
 <title>TC Veículos</title>
 <defs>${DEG.replace('<linearGradient id="tcg"', '<linearGradient id="tcg" gradientUnits="objectBoundingBox"')}</defs>
 ${contorno}
 ${preench}
 ${v.svg}
-${ICONE(588, 220, 1)}
-${f.svg}
 </svg>
 `;
 }
 
 fs.mkdirSync(SAIDA, { recursive: true });
-fs.writeFileSync(path.join(SAIDA, 'tc-logo.svg'), logo(false));
-fs.writeFileSync(path.join(SAIDA, 'tc-logo-escuro.svg'), logo(true));
+// largura: ate o fim de VEICULOS (inclinado) mais uma folga
+const W = Math.ceil(425 + palavra(VEICULOS, { s: 17, r: 13, gap: 13, x: 0, base: 0, alt: 58, inclina: 17, cor: '#000' }).largura + 58 * Math.tan(17 * Math.PI / 180) + 12);
+fs.writeFileSync(path.join(SAIDA, 'tc-logo.svg'), logo(false).replaceAll('__W__', W));
+fs.writeFileSync(path.join(SAIDA, 'tc-logo-escuro.svg'), logo(true).replaceAll('__W__', W));
 console.log('ok', SAIDA);
