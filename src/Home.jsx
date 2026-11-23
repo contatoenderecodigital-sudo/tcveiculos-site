@@ -92,8 +92,7 @@ export default function Home({ estoque, saved, toggleSave }) {
             </Reveal>
             <div className="tc-category-gallery">
               {CATEGORIAS.map((q, i) => {
-                // foto do carro mais recente da categoria; sem carro, fica a arte da campanha
-                const foto = cars.find((c) => c.category === q.value && c.photos[0])?.photos[0];
+                // sempre a arte da campanha: a foto real do patio fica embaixo do titulo
                 return (
                   <motion.button
                     initial={reduce ? false : { opacity: 0, y: 24 }}
@@ -107,7 +106,7 @@ export default function Home({ estoque, saved, toggleSave }) {
                       rolarPara("estoque");
                     }}
                   >
-                    <img src={foto || q.art} alt="" loading="lazy" />
+                    <img src={q.art} alt="" loading="lazy" />
                     <div className="tc-category-head">
                       <h3>{q.name}</h3>
                       <span>{q.copy}</span>
