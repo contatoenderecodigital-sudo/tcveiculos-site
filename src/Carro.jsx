@@ -85,9 +85,6 @@ function Galeria({ car }) {
             </button>
           ))}
         </div>
-        <span>
-          {String(i + 1).padStart(2, "0")} / {String(fotos.length).padStart(2, "0")}
-        </span>
       </div>
     </section>
   );
