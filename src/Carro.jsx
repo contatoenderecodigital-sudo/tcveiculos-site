@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Share2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, MapPin, Share2 } from "lucide-react";
 import { buscarCarro } from "./estoque.js";
-import { Action, BrandLogo, CarCard, Link, META_PADRAO, WhatsIcon, brl, nomeCarro, setMeta, wa } from "./ui.jsx";
+import { Action, BrandLogo, CarCard, Link, MAPS, META_PADRAO, WhatsIcon, brl, nomeCarro, setMeta, wa } from "./ui.jsx";
 
 const NI = "Não informado";
 
@@ -192,7 +192,8 @@ function Compartilhar({ car }) {
         }
       }}
     >
-      <Share2 size={15} /> {ok ? "Link copiado" : "Compartilhar este veículo"}
+      <i className="tc-contact-icon"><Share2 size={17} /></i>
+      <span><small>Compartilhar</small>{ok ? "Link copiado" : "Enviar este veículo"}</span>
     </button>
   );
 }
@@ -339,18 +340,31 @@ export default function Carro({ id, estoque, saved, toggleSave }) {
       {header}
       <div className="tc-product-scroll" ref={scroll}>
         <div className="tc-product-title">
-          <div>
-            <p className="tc-product-brand">
-              <BrandLogo brand={n.brand} />
-              <span>{n.year}</span>
-              {n.status === "reservado" && <b className="tc-reserved-tag">Reservado</b>}
-            </p>
-            <h1>
-              {n.model}
-              <span>{n.version}</span>
-            </h1>
+          <div className="tc-product-name">
+            <BrandLogo brand={n.brand} />
+            <div>
+              <h1>
+                {n.model}
+                {n.status === "reservado" && <b className="tc-reserved-tag">Reservado</b>}
+              </h1>
+              {n.version && <p className="tc-product-version">{n.version}</p>}
+            </div>
           </div>
-          <span>Xanxerê, SC</span>
+          <dl className="tc-product-facts">
+            {[
+              ["Ano", n.manufactureYear && n.manufactureYear !== n.year ? `${n.manufactureYear}/${n.year}` : n.year],
+              ["Km", n.mileage > 0 ? n.mileage.toLocaleString("pt-BR") : null],
+              ["Câmbio", n.gear],
+              ["Combustível", n.fuel],
+            ]
+              .filter(([, v]) => v)
+              .map(([k, v]) => (
+                <div key={k}>
+                  <dt>{k}</dt>
+                  <dd>{v}</dd>
+                </div>
+              ))}
+          </dl>
         </div>
         <nav className="tc-product-nav" aria-label="Informações do veículo">
           {secoes.map((s) => (
@@ -428,16 +442,16 @@ export default function Carro({ id, estoque, saved, toggleSave }) {
               </a>
               <div className="tc-purchase-dealer">
                 <strong>TC Veículos</strong>
-                <p>
-                  Av. Brasil, 1313 · Colatto
-                  <br />
-                  Xanxerê, Santa Catarina
-                </p>
-                <a href={falar("Gostaria de tirar uma dúvida.")} target="_blank" rel="noreferrer">
-                  WhatsApp · (49) 3430 0680
+                <a href={MAPS} target="_blank" rel="noreferrer">
+                  <i className="tc-contact-icon"><MapPin size={17} /></i>
+                  <span><small>Endereço</small>Av. Brasil, 1313 · Colatto, Xanxerê</span>
                 </a>
+                <a href={falar("Gostaria de tirar uma dúvida.")} target="_blank" rel="noreferrer">
+                  <i className="tc-contact-icon"><WhatsIcon /></i>
+                  <span><small>WhatsApp</small>(49) 3430 0680</span>
+                </a>
+                <Compartilhar car={n} />
               </div>
-              <Compartilhar car={n} />
             </div>
           </aside>
         </div>
